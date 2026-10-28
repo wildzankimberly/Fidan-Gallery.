@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidan Gallery - Classical Art in Modern Light</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-mark">F</span>
+                <span class="logo-text">FIDAN GALLERY</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#featured" class="nav-link">Featured</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-content">
+                <span class="badge">Elegansi Klasik & Visual Modern</span>
+                <h1 class="hero-title">Keindahan Abadi Lukisan Legendaris Masa Lalu</h1>
+                <p class="hero-description">
+                    Menelusuri mahakarya maestro dunia dari era Renaisans hingga Impresionisme, disajikan dengan estetika kontemporer dan pengalaman interaktif.
+                </p>
+                <div class="hero-actions">
+                    <a href="#gallery" class="btn btn-primary">Jelajahi Galeri</a>
+                    <a href="#featured" class="btn btn-secondary">Karya Unggulan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="section-header">
+                <h2 class="section-title">Koleksi Mahakarya</h2>
+                <div class="gold-divider"></div>
+                <p class="section-subtitle">Pilih dan nikmati detail sejarah dari lukisan paling berpengaruh dalam peradaban manusia.</p>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="renaisans">Renaisans</button>
+                <button class="filter-btn" data-filter="barok">Barok</button>
+                <button class="filter-btn" data-filter="impresionisme">Impresionisme</button>
+                <button class="filter-btn" data-filter="modern">Modern / Surrealisme</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Cards inject via JS / Hardcoded for initial SEO -->
+                <div class="art-card" data-category="renaisans" data-id="1">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80" alt="Mona Lisa" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn-preview"><i class="fa-solid fa-expand"></i></button>
+                            <div class="card-info">
+                                <h3>Mona Lisa</h3>
+                                <p>Leonardo da Vinci • 1503</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="art-card" data-category="impresionisme" data-id="2">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80" alt="Starry Night" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn-preview"><i class="fa-solid fa-expand"></i></button>
+                            <div class="card-info">
+                                <h3>The Starry Night</h3>
+                                <p>Vincent van Gogh • 1889</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="art-card" data-category="barok" data-id="3">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=1000&q=80" alt="Girl with a Pearl Earring" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn-preview"><i class="fa-solid fa-expand"></i></button>
+                            <div class="card-info">
+                                <h3>Girl with a Pearl Earring</h3>
+                                <p>Johannes Vermeer • 1665</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="art-card" data-category="renaisans" data-id="4">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?auto=format&fit=crop&w=1000&q=80" alt="The Birth of Venus" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn-preview"><i class="fa-solid fa-expand"></i></button>
+                            <div class="card-info">
+                                <h3>The Birth of Venus</h3>
+                                <p>Sandro Botticelli • 1485</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="art-card" data-category="modern" data-id="5">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1579783928621-6a13d66a62d1?auto=format&fit=crop&w=1000&q=80" alt="The Great Wave off Kanagawa" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn-preview"><i class="fa-solid fa-expand"></i></button>
+                            <div class="card-info">
+                                <h3>The Great Wave off Kanagawa</h3>
+                                <p>Hokusai • 1831</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="art-card" data-category="modern" data-id="6">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1000&q=80" alt="The Persistence of Memory" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn-preview"><i class="fa-solid fa-expand"></i></button>
+                            <div class="card-info">
+                                <h3>The Persistence of Memory</h3>
+                                <p>Salvador Dalí • 1931</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section id="featured" class="featured-section">
+            <div class="featured-card">
+                <div class="featured-img-container">
+                    <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80" alt="Featured Painting">
+                </div>
+                <div class="featured-content">
+                    <span class="badge">Karya Sorotan Bulan Ini</span>
+                    <h2>The Starry Night</h2>
+                    <p class="artist">Vincent van Gogh (1889)</p>
+                    <p class="description">
+                        Dilukis dari jendela kamar suaka Saint-Paul-de-Mausole di Saint-Rémy-de-Provence, lukisan ini menggambarkan pemandangan malam yang dramatis dengan pusaran warna biru dan kuning emas yang emosional.
+                    </p>
+                    <button class="btn btn-primary open-featured-modal" data-id="2">Lihat Analisis Detail</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <h2>Tentang Fidan Gallery</h2>
+                <div class="gold-divider"></div>
+                <p>
+                    Fidan Gallery didirikan dengan visi untuk mempertemukan keindahan seni rupa sejarah dengan kemajuan antarmuka visual modern. Kami percaya bahwa seni klasik memiliki jiwa abadi yang layak diapresiasi oleh generasi digital dalam tampilan yang elegan dan imersif.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>FIDAN GALLERY</h3>
+                <p>Preserving history through modern aesthetics.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fidan Gallery. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="modal" id="artModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img src="" id="modalImg" alt="Detail Lukisan">
+                </div>
+                <div class="modal-details">
+                    <span class="badge" id="modalCategory">Era</span>
+                    <h2 id="modalTitle">Judul Lukisan</h2>
+                    <p class="modal-meta" id="modalMeta">Pelukis • Tahun</p>
+                    <div class="modal-divider"></div>
+                    <p class="modal-desc" id="modalDesc">Deskripsi sejarah...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
